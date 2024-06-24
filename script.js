@@ -1,29 +1,33 @@
 const navDialog=document.getElementById('Menubar');
 
+const bars=document.getElementById('bars');
+const xmark=document.getElementById('xmark');
+
 function HandleMenu(){
-    navDialog.classList.toggle("hidden")
+    navDialog.classList.toggle("hidden");
 }
+bars.addEventListener('click',()=>{
+    bars.classList.toggle("hidden");
+    xmark.classList.toggle("hidden");
+})
+xmark.addEventListener('click',()=>{
+    xmark.classList.toggle("hidden");
+    bars.classList.toggle("hidden");
+})
 
-function disappear(){
-    const ele=document.getElementById("home-section")
-    ele.addEventListener("click",()=>{
-        console.log("Rounak");
-        navDialog.classList.toggle("hidden")
-    })
-    const ele1=document.getElementById("about-sec")
-    ele1.addEventListener("click",()=>{
-        console.log("Rounak");
-        navDialog.classList.toggle("hidden")
-    })
-    const ele2=document.getElementById("project-sec")
-    ele2.addEventListener("click",()=>{
-        console.log("Rounak");
-        navDialog.classList.toggle("hidden")
-    })
-    const ele3=document.getElementById("contact-sec")
-    ele3.addEventListener("click",()=>{
-        console.log("Rounak");
-        navDialog.classList.toggle("hidden")
-    })
 
-}
+
+
+
+const elements=document.querySelectorAll('.hideMenu');
+elements.forEach(element=>{
+    element.addEventListener('click',()=>{
+        navDialog.classList.toggle("hidden");
+        if(!xmark.classList.contains("hidden")){
+            xmark.classList.add("hidden");
+        }
+        if(bars.classList.contains("hidden")){
+            bars.classList.toggle("hidden");
+        }
+    })
+});
