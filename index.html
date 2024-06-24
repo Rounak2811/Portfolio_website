@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personsal PortFolio Website</title>
+    <link rel="stylesheet" href="./output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        
+</head>
+
+<body class=" w-screen h-fit font-lato bg-[url('./background-image_portfolio.jpg')] bg-cover  bg-fixed   bg-no-repeat backdrop-blur-[4px] overflow-x-hidden">
+    <nav class="w-screen sticky top-0 z-10 md:z-30">
+        <div id="nav-bar" class=" flex justify-between items-center w-screen bg-[#180436]  text-white">
+            <div id="PortFolio" class="  text-xl lg:text-2xl p-8 hover:cursor-pointer hover:text-yellow-200 hover:scale-[1.2]  transition duration-300"><i>Rounak kumar</i></div>
+            <div class="md:hidden mr-4 ">
+                <i class="fa-solid p-8 fa-bars hover:text-yellow-200 hover:cursor-pointer hover:scale-[1.2] transition duration-300" onclick="HandleMenu()"></i>
+            </div>
+            <div id="nav-options" class="hidden md:flex  md:mr-6">
+                <div class="text-xl lg:text-2xl flex items-center gap-20">
+                    <a href="#" class="p-4 hover:text-yellow-200 hover:scale-[1.2]  transition duration-300" >Home</a>
+                    <a href="#about-section" class="p-4 hover:text-yellow-200 hover:scale-[1.2] transition duration-300">About</a>
+                    <a href="#project-section" class="p-4 hover:text-yellow-200 hover:scale-[1.2] transition duration-300">Projects</a>
+                    <a href="#contact-section" class="p-4 hover:text-yellow-200 hover:scale-[1.2] transition duration-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="Menubar" class="hidden sticky top-0 md:hidden box inset-0 z-20  h-screen w-screen bg-[#180436]  text-white">
+        <div class="flex justify-between items-center">
+            <div id="PortFolio" class=" text-xl p-8 hover:cursor-pointer hover:text-yellow-200 hover:scale-[1.2]  transition duration-300"><i>Rounak kumar</i></div>
+            <div class="md:hidden mr-4 hover:cursor-pointer" onclick="HandleMenu()">
+                <i class="fa-solid p-8 fa-xmark  hover:text-yellow-200 hover:scale-[1.2] transition duration-300"></i>
+            </div>
+        </div>
+        <hr>
+        <div class="dropdown flex flex-col gap-2 p-5 text-xl">
+            <div class="hover:bg-[#290753] p-4 rounded-md "><a id="home-section" href="#" class="  hover:text-yellow-200" onclick="disappear()">Home</a></div>
+            <div class="hover:bg-[#290753] p-4 rounded-md "><a id="about-sec" href="#about-section" class="hover:text-yellow-200 " onclick="disappear()">About</a></div>
+            <div class="hover:bg-[#290753] p-4 rounded-md "><a id="project-sec" class="hover:text-yellow-200" href="#project-section" onclick="disappear()">Projects</a></div>
+            <div class="hover:bg-[#290753] p-4 rounded-md"><a id ="contact-sec" class="hover:text-yellow-200 " href="#contact-section" onclick="disappear()">Contact</a></div>
+        </div>
+    </div>
+    <main>
+        <div id="hero-section" class="sticky top-52 z-0 mt-24 md:mt-35 flex flex-col gap-16 md:flex-row md:justify-evenly items-center text-white text-2xl md:text-3xl lg:text-4xl">
+            <div class="occupation">
+                Hello, My name is <i class="text-yellow-200">Rounak</i> 
+                <div> and I am a passionate</div>
+                <span id="element" class="text-yellow-200"></span>
+            </div>
+            <div class="photo_developer">
+                <div class>
+                    <img src="./developer_image.png" alt="" class="h-[270px] w-[270px] md:h-fit lg:w-fit">
+                </div>
+            </div>
+        </div>
+        <div id="menus-description" class="w-screen relative z-0  bg-black bg-opacity-80  text-indigo-100">
+            <div id="about-section" class="flex flex-col items-center pt-32 justify-between gap-16 lg:items-start lg:flex-row lg:justify-evenly">
+                <img src="./Photo1_2.jpg" alt="myphoto" class="w-2/5 center md:w-3/12 rounded-xl border-2 border-indigo-500 md:mt-20"> 
+                <div class="flex flex-col items-center gap-9">
+                    <div>
+                        <p class="text-5xl underline text-center hover:scale-[1.2]  transition duration-300 hover:text-yellow-200 hover:cursor-pointer inline-block">About Me</p>
+                    </div>
+                    <div>
+                        <p class="text-xl text-center">Hi, My name is Rounak Kumar and I am currently pursuing my B-Tech Degree in Computer Science and Engineering specialization at National Institute of Technology , Patna with 8.4 as aggregate CGPA. I am a very passionate about technological developments  happening in this era of emerging technology.I have developed several skills in Web technology ,i.e., HTML, CSS , Javascript and Tailwind CSS. I am also very passionate about solving problems of Data Structures and algorithm. I have worked upon several programming languages such as C ,C++, Java, Python and Database language(SQL), besides this I have also used tools like VS code, GitHub ,etc. For enhancing my problem solving skill in DSA , I regularly participate in the coding contest organized by various Competitive Programming Codechef , LeetCode , Codeforces and achieved good ranks and ratings.
+                            Following is my previous academic records at a glance:  </p>
+                    </div>
+                    <div>
+                        <table class="border border-collapse w-4/5">
+                            <tr>
+                                <th class="border-2 border-collapse p-1 md:p-3 text-sm md:text-xl">Institutional Designation</th>
+                                <th class="border-2 border-collapse p-1 md:p-3 text-sm md:text-xl">Name of the Institute/School</th>
+                                <th class="border-2 border-collapse p-1 md:p-3 text-sm md:text-xl">Passing year</th>
+                                <th class="border-2 border-collapse p-1 md:p-3 text-sm md:text-xl">Perentage/CGPA</th>
+                            </tr> 
+                            <tr class="text-center">  
+                                <td class="border-2 border-collapse p-1 md:p-3  text-sm md:text-lg">Graduation</td>
+                                <td class="border-2 border-collapse p-1 md:p-3  text-sm md:text-lg">National Institute of Technology , Patna(Bihar)</td>
+                                <td class="border-2 border-collapse p-1 md:p-3 text-sm md:text-lg ">Yet to be completed</td>
+                                <td class="border-2 border-collapse p-1 md:p-3 text-sm md:text-lg ">8.4(upto 6<sup>th</sup> Semester)</td>
+                            </tr> 
+                            <tr class="text-center">  
+                                <td class="border-2 border-collapse p-1 text-sm md:text-lg md:p-3">Intermediate(12<sup>th</sup>)</td>
+                                <td class="border-2 border-collapse p-1 text-sm md:text-lg md:p-3">Happy Valley School , Bhagalpur(Bihar)</td>
+                                <td class="border-2 border-collapse p-1 text-sm md:text-lg md:p-3">2020</td>
+                                <td class="border-2 border-collapse p-1 text-sm md:text-lg md:p-3">94.2</td>
+                            </tr>
+                            <tr class="text-center">
+                                <td class="border-2 border-collapse p-1 text-sm md:text-lg md:p-3">Metriculation(10<sup>th</sup>)</td>
+                                <td class="border-2 border-collapse p-1 text-sm md:text-lg md:p-3">A.D.S. Vidya Mandir , Bhagalpur(Bihar)</td>
+                                <td class="border-2 border-collapse p-1 text-sm md:text-lg md:p-3">2018</td>
+                                <td class="border-2 border-collapse p-1 text-sm md:text-lg md:p-3">93.7</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="project-section" class="flex flex-col items-center gap-16 pt-32">
+                <div class="text-5xl  text-center ">
+                    <p class=" underline hover:cursor-pointer hover:scale-[1.2]  transition duration-300 hover:text-yellow-200 inline-block">Projects</p>
+                </div>
+                <div class="flex flex-col gap-20  items-center lg:flex-row  lg:justify-evenly lg:items-end">
+                    <div id="PortFolio" class="hover:cursor-pointer hover:-translate-y-3 transition duration-300 hover:scale-[1.1]">
+                       
+                        <a href="#" target="_blank"> <img src="./Portfolio_icon" alt="" class="rounded-xl border-4 border-indigo-500">
+                        </a>
+                        <p class="text-center mt-4 md:text-xl">PortFolio Website</p>
+                    </div> 
+                    <div id="landing-page" class="hover:cursor-pointer hover:-translate-y-3 transition duration-300 hover:scale-[1.1]">
+                         
+                        <a href="https://rounak2811.github.io/Loading_Page/"  target="_blank">
+                            <img src="./landing_page_icon.jpg" alt=""  class="w-fit rounded-xl border-4 border-indigo-500">
+                        </a>
+                        <p class="text-center mt-4 md:text-xl">Landing Page of ToDesktop</p>
+                    </div> 
+                    <div id="tic-tac-toe" class="hover:cursor-pointer hover:-translate-y-3 transition duration-300 hover:scale-[1.1]">
+                        <a href="https://rounak2811.github.io/Tic-Tac-Toe/" target="_blank">
+                            <img src="./tic-tac-toe_icon.png" alt="" class="rounded-xl border-4 border-indigo-500">
+                        </a>
+                        <p class="text-center mt-4 text-xl">Tic-Tac-Toe</p>
+                    </div> 
+                </div>
+            </div>
+            <div id="contact-section" class="flex flex-col items-center gap-10 pt-32">
+                <p class="text-5xl underline hover:text-yellow-200 hover:scale-[1.1] transition duration-300">Contact</p>
+                <div class="box-container items-center md:p-16 flex basis-full flex-col gap-24  lg:flex-row md:justify-around md:items-start">
+                    <div class="md:p-10 left-container text-xl md:text-2xl  flex flex-col gap-8">
+                        <div class="gmail flex justify-center gap-3">
+                            <div class="gmail-logo">
+                                <i class="fa-solid fa-envelope text-red-700 "></i>
+                            </div>
+                            <a href="mailto:kumarrounakjha@gmail.com">kumarrounakjha@gmail.com</a>
+                        </div>
+                        <div class="phone flex gap-3">
+                            <div class="phone-logo">
+                                <i class="fa-solid fa-phone text-red-700 "></i>
+                            </div>
+                            <p>+91-7281977815</p>
+                        </div>
+                        <div class="social-media flex gap-4">
+                            <a href="https://www.instagram.com/rounakkumar612/" target="_blank">
+                                <i class="fa-brands fa-instagram text-red-700 "></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/rounak-kumar-74a116196/" target="_blank">
+                                <i class="fa-brands fa-linkedin text-red-700 "></i>
+                            </a>
+                        </div>
+                        <a href="./Rounak_Kumar_NITP.pdf" download class="border w-fit p-3 bg-red-700 rounded-lg hover:scale-[1.1] trasition duration-300"> Download Resume</a>
+                    </div>
+                    <div class=" md:p-10 right-container">
+                        
+                        <form action="" class="flex flex-col gap-8" name="submit-to-google-sheet">
+                            <h1 class="text-2xl md:text-4xl text-indigo-400">Contact Me</h1>
+                            <input type="text" name="Name" placeholder="Your Name" class="p-3 bg-slate-800   rounded-lg  hover:scale-[1.06] transition duration-300 " required>
+                            <input type="email" name="Email" placeholder="Your Email" class="p-3 rounded-lg bg-slate-800 border-slate-100   hover:scale-[1.06] transition duration-300" required>
+                            <textarea name="Message" rows="10" cols="40 lg:60" placeholder="Your Message" class="p-3 rounded-lg bg-slate-800   hover:scale-[1.06] transition duration-300 " required></textarea>
+                            <button id="Submit-button" class="p-3 rounded-lg text-center border-slate-100 border hover:bg-opacity-90 hover:scale-[1.1] transition duration-300 bg-red-700 w-fit ">Submit</button>
+                        </form>
+                        <span id="msg" class="text-xl text-green-700"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="w-screen relative z-0  bg-black bg-opacity-80  text-indigo-100">
+        <hr class="text-white">
+        <div class="cpyright">
+            <p class="text-center md:text-2xl">&copy; Copyright @ ROUNAK KUMAR(2023)</p>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['<i>Web Developer</i>','<i>Competitive Programmer</i>','<i>Programmer</i>','<i>Learner</i>'],
+          typeSpeed: 90,
+        });
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyS54_MHpjvGOcxo6nb-iUUV0eKGa77ag6k902F6babeIe5MtMA_gvBcNA68tusQ2s/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById('msg');
+
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response =>{
+                msg.innerHTML="Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+
+</html>
